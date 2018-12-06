@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{resources/fragments/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <section>
+        <h1>Conversion</h1>
+        <p class="info">Conversion</p>
+        <p class="form" th:object="${findConversionForm}">
+            Amount: <span th:text="*{number}">Missing</span>,
+            From: <span th:text="*{from}">Missing</span>,
+            To: <span th:text="*{to}">Missing</span>,
+            Result: <span th:text="*{conversionResult}">Missing</span>
+        </p>
+    </section>
+
+</main>
+</body>
+</html>
